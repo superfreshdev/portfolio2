@@ -1,0 +1,205 @@
+/* --------------------------------------------
+
+    header.css 
+
+    Define Layout which will be only used
+    in my header
+
+---------------------------------------------- */
+
+.resp-header-width-content-container {
+
+    padding: 0em .8em
+}
+
+#own-header-container {
+
+    background-color: var(--dark-black-1);
+
+    z-index: 6;
+
+    position: fixed;
+    left:0;
+    right:0;
+
+  
+}
+
+
+
+
+
+/* -------------------------------------------------------------- */
+/* Own Header Layout 
+/* -------------------------------------------------------------- */
+
+#own-header-layout {
+
+    display: flex;
+    /* align-items: center; | interessant by desktop version */
+    flex-direction: column;
+
+    width: 30em;
+
+    /* max-width: 30em; */
+
+    /*Stretch*/
+    /* flex:1; */
+
+}
+
+
+
+/* -------------------------------------------------------------- */
+/* [1/2] - Header Title Layout  
+/* -------------------------------------------------------------- */
+
+#own-header-title-layout {
+
+    height: 3em;  /* 3em + .6em */
+    
+    /* Default smallest Mobile Version */
+    padding: .6em .8em 0em .8em;
+   
+    display: flex;
+    align-items: center;
+    column-gap: .8em;
+ 
+}
+
+.img-own-header-me { 
+
+    width: 2.6em;
+    height: 2.6em;
+
+    border-radius: .3em;
+}
+
+#own-header-title-box { line-height: 1.2em; }
+
+#own-header-title { font-weight: bold;  }
+#own-header-sub-title { font-size: .8em; color: var(--light-brown-3); font-style: italic; }
+    
+
+
+
+/* -------------------------------------------------------------- */
+/* [2/2] - Header Nav Layout
+/* -------------------------------------------------------------- */
+
+
+#own-header-nav-layout { 
+
+    height: 3em; /*3em + .3em*/
+
+    /* Default smallest Mobile Version */
+    padding: 0em .8em .3em .8em;
+    /* padding-bottom: .3em; */
+    /* background-color: green; */
+
+
+    display: flex;
+    align-items: center; 
+
+}
+
+
+.own-header-nav-label-seperator { 
+
+    padding: 0em .1em;
+    font-weight: bold;
+}
+
+
+/* -------------------------------------------------------------- */
+/* [Label] - Header Nav Layout  
+/* -------------------------------------------------------------- */
+
+/* ----------------------------------------- */
+/* Default Unshown                           */
+/* ----------------------------------------- */
+
+/* Unshown Radio Buttons */
+input#radio-header-topic-nav-docs , 
+input#radio-header-topic-nav-projects ,
+input#radio-header-topic-nav-about { display: none; }
+
+/* Mobile Version unshown topic img */
+.lbl-own-header-nav > img:nth-of-type(1) { display: none; }
+.lbl-own-header-nav > img:nth-of-type(2) { display: none; }
+
+.lbl-own-header-nav {
+
+    padding-top: .3em;
+    padding-bottom: .2em;
+
+    font-size: .85em;
+
+    font-weight: bold;
+
+    /* light-brown-3: #d9bf98 -> rgb -> 217	191	152*/
+    border: .1em solid rgba(217, 191, 152, .8);
+
+    border-radius: .3em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: .5em;
+
+    /* flex item ( flex layout binding ) */
+    /* every flex item grow max of space */
+    flex-grow: 1;
+
+    cursor: pointer;
+
+}
+
+/* -------------------------------------------------------- */
+/* Hover Handling 
+/* -------------------------------------------------------- */
+
+.lbl-own-header-nav:hover {
+
+    transition: .3s;
+    background-color: var(--light-brown-3);
+    color: var(--dark-black-1);
+}
+
+/* --------------------------------------- */
+/* IMG 
+/* --------------------------------------- */
+
+.img-lbl-nav-header-topic ,
+.img-lbl-nav-flag { 
+
+    width: 1.2em;
+    border-radius: .1em;
+    
+}
+
+.img-lbl-nav-flag {
+
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+                rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+                rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+
+
+/* --------------------------------------- */
+/* Radio - Handling  
+/* --------------------------------------- */
+
+/* Default Mobile Handling to show background brown and black colors 
+/* in bigger screen size we add in responsive css file for icon white & black 
+/* handling */
+
+input#radio-header-nav-docs:checked ~ #own-header-container #trigger-lbl-header-nav-docs , 
+input#radio-header-nav-projects:checked ~ #own-header-container #trigger-lbl-header-nav-projects,
+input#radio-header-nav-about:checked ~ #own-header-container #trigger-lbl-header-nav-about {
+
+    background-color: var(--light-brown-3);
+    color:var(--dark-black-1);
+
+}

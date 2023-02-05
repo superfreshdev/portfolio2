@@ -1,0 +1,465 @@
+/* --------------------------------------------
+
+    main.css 
+
+    Define Layout Elements & Styles which
+    will be in all main components be the same
+
+---------------------------------------------- */
+
+
+
+
+
+
+/* ------------------------------------------------------------------------------------------ */
+/* Main ( own-main-container )
+/* ------------------------------------------------------------------------------------------ */
+
+#own-main-container {
+
+    /* parent position to bind background color , img , video */
+    position: relative;
+    top:0;
+
+    /* default smallest mobile version 3.3 + 3.6 */
+    margin-top: 6.1em;
+   
+}
+
+
+/* ------------------------------------------------------------------------------------------ */
+/* Default Position - Card Layout 
+/* ------------------------------------------------------------------------------------------ */
+
+.own-main-card-position {
+
+   /* important because background should anker on own-main-container & not body */
+   position: relative;
+   top:0;
+
+   /* because we want main card box-shadow view */
+   padding: 0em .8em;
+
+   /* imporant because we want our own main card pos go be widht */
+   display: flex;
+   justify-content: center;
+
+}
+
+/* -------------------------------------------------------------- */
+/* Default Position - Background Color / IMG / Video Layout  
+/* -------------------------------------------------------------- */
+
+.pos-background-layout-card {
+
+    z-index: -1;
+    
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;   
+
+}
+
+/* ------------------------------------------------------------------------------------------ */
+/* Main Card Content Container 
+/* ------------------------------------------------------------------------------------------ */
+
+.main-card-content-container {
+
+    padding: 1.5em 0em;
+
+    box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+
+   
+ 
+
+    /* background-color: var(--dark-grey-5); */
+
+    /* background-color: green; */
+    /* border-left: 3px solid red; */
+}
+
+
+/* -------------------------------------------------------------- */
+/* Default - Main Header Width Container 
+/* -------------------------------------------------------------- */
+
+/* This Container works like header width  */
+.main-header-width-container {
+
+    /* 30em - .8em - .8em */
+    /* because our main inside grow little bit later than 
+    /* our header and thats default left .8em and right .8em , so
+    /* thats why we need smaller max-width to be on the same width as header content */
+    max-width: 28.4em; 
+    min-width: 100%; 
+
+}
+
+/* Default Header Width Layout - if u dont use content goes directly to borders */
+.main-header-width-layout {
+
+    background-color: var(--dark-black-1);
+    color: yellow;
+
+    padding: .8em;
+
+    border-radius: .3em;
+    
+}
+
+
+
+/* -------------------------------------------------------------- */
+/* [1/2] - Sub Main Nav Topics ( docs , projects )
+/* -------------------------------------------------------------- */
+
+
+.main-nav-topic-docs-projects-layout {
+
+    background-color: var(--dark-black-1);
+    border-bottom: .2em solid var(--light-brown-3);
+
+    border-radius: .3em .3em 0em 0em;
+
+    display: grid;
+    grid: auto / 1fr 1fr 1fr 1fr auto;
+
+
+    /* max-width: 28.4em;  */
+    /* width: 30em; */
+
+}
+
+/* Stripe Sepearator Style */
+.main-nav-topic-docs-projects-layout > label:nth-of-type(1) ,
+.main-nav-topic-docs-projects-layout > label:nth-of-type(2) ,
+.main-nav-topic-docs-projects-layout > label:nth-of-type(3) ,
+.main-nav-topic-docs-projects-layout > label:nth-of-type(4) {
+
+    border-right: .15em solid var(--dark-grey-1);
+}
+
+
+
+/* ------------------------------------------------------------------- */
+/* Label Item - Sub Nav Main 
+/* ------------------------------------------------------------------- */
+
+/* Default Unshown */
+/* main nav text unshown */
+.lbl-sub-main-nav > .lbl-main-nav-txt-layout { display: none; }
+
+
+.lbl-sub-main-nav ,
+.lbl-sub-main-nav-audio {
+
+    /* same font size like header nav */
+    font-size: .85em;
+    font-weight: bold;
+
+    padding: .8em;
+
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    column-gap: .8em;
+
+    cursor: pointer;
+
+}
+
+.main-nav-topic-docs-projects-layout > label:nth-of-type(1) { border-radius: .3em 0em 0em 0em; }
+
+
+.img-main-nav-lbl {  height: 2.2em; }
+
+.lbl-main-nav-txt-layout { line-height: 1.3em; }
+
+
+/* ----------------------------------- */
+/* Audio Label Item                    */
+/* ----------------------------------- */
+
+.lbl-sub-main-nav-audio {  
+    
+    background-color: var(--medium-grey-1);
+
+    width: 2.5em;
+    border-radius: 0em .3em 0em 0em; 
+}
+
+.img-main-nav-audio { width: 2.2em; }
+   
+
+
+
+/* -------------------------------------------------------- */
+/* Hover & Handling - Label 
+/* -------------------------------------------------------- */
+
+.lbl-sub-main-nav:hover ,
+.lbl-sub-main-nav-audio:hover {
+
+    transition: .3s;
+    background-color: var(--light-brown-3);
+    color: var(--dark-black-1);
+}
+
+/* unshown white & show black icon */
+.lbl-sub-main-nav:hover > div:first-child > img:nth-of-type(1) {  display: none; }
+.lbl-sub-main-nav:hover > div:first-child > img:nth-of-type(2) {  display: block; }
+   
+
+
+
+
+
+/* --------------------------------------------------------------- */
+/* Default Unshown 
+/* --------------------------------------------------------------- */
+
+/* Default unshown 2nd icon of topic & audio label */
+.lbl-sub-main-nav > div:first-child > img:nth-of-type(2),
+.lbl-sub-main-nav-audio > div:first-child > img:nth-of-type(2) {display: none; }
+
+
+/* Checkbox Audio */
+#chk-mp3-docs , 
+#chk-mp3-projects , 
+#chk-mp3-about { display: none; }
+
+
+/* ------------------------------------------------------------------------ */
+/* Checkbox Audio - Hanlding ( docs , projects , about )
+/* ------------------------------------------------------------------------ */
+
+/* Show Red Background if Audio is checked */
+#chk-mp3-docs:checked ~ #own-main-container #js-lbl-mp3-docs,
+#chk-mp3-projects:checked ~ #own-main-container #js-lbl-mp3-projects,
+#chk-mp3-about:checked ~ #own-main-container #js-lbl-mp3-about {
+
+    background-color: var(--medium-red-3);
+}
+
+/* unshow play img  */
+#chk-mp3-docs:checked ~ #own-main-container #js-lbl-mp3-docs > div:first-child > img:nth-of-type(1),
+#chk-mp3-projects:checked ~ #own-main-container #js-lbl-mp3-projects > div:first-child > img:nth-of-type(1),
+#chk-mp3-about:checked ~ #own-main-container #js-lbl-mp3-about > div:first-child > img:nth-of-type(1) {
+    display: none;
+}
+
+/* show pause img */
+#chk-mp3-docs:checked ~ #own-main-container #js-lbl-mp3-docs > div:first-child > img:nth-of-type(2) ,
+#chk-mp3-projects:checked ~ #own-main-container #js-lbl-mp3-projects > div:first-child > img:nth-of-type(2) ,
+#chk-mp3-about:checked ~ #own-main-container #js-lbl-mp3-about > div:first-child > img:nth-of-type(2) {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+    
+/* -------------------------------------------------------------- */
+/* [2/2] - Filter Topic Panel ( dokus , projects )
+/* -------------------------------------------------------------- */
+
+
+.filter-topic-panel {
+
+    background-color: var(--dark-black-1);
+    border-radius: 0em 0em 0em 0em;
+
+    /* it will be automatically show by checked dokus nav */
+    display: none;
+    /* display: grid; */ 
+    grid: auto / 1fr auto;
+
+}
+
+
+
+/* -------------------------------------------------------------- */
+/* [1/2] - Filter Label Item Container ( docs , projects )
+/* -------------------------------------------------------------- */
+
+
+.filter-sub-topic-container {
+    
+    padding: 1em .8em;
+
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-flow: row wrap; */
+    align-items: flex-start;
+    align-content: flex-start;
+
+   
+    
+    column-gap: .5em;
+    row-gap: .5em;
+
+}
+
+/* --------------------------------------------- */
+/* Label Filter Sub Topic Item 
+/* --------------------------------------------- */
+
+.lbl-filter-sub-topic-item {
+
+    cursor: pointer;
+
+    font-weight: bold;
+    font-size: .75em; /* .10 smaller than sub nav main .85em */
+
+    display: flex;
+    align-items: center;
+    
+
+    column-gap: .8em;
+
+    border: 1px solid var(--medium-grey-3);
+    color:var(--medium-grey-1);
+
+    border-radius: .3em;
+
+    padding: .3em .6em;
+
+ 
+}
+
+/* lbl filter sub topic item hover -> docs-card.css */
+
+/* ----------------------------------------- */
+/* My Own Radio Button Style 
+/* ----------------------------------------- */
+
+.my-own-circle-outside {
+
+    position: relative;
+    top:0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    /* important because if sometimes screen get smaller 
+    /* some elment get smaller */
+    min-width: 1em;
+    min-height: 1em;
+
+    max-width: 1em;
+    max-height: 1em;
+
+    
+
+    border: 2px solid var(--medium-grey-1);
+
+}
+
+.my-own-set-point {
+
+    /* default unshown for unset */
+    display: none;
+
+    border-radius: 50%;
+
+    min-width: .4em;
+    min-height: .4em;
+
+    max-width: .4em;
+    max-height: .4em;
+
+    background-color: var(--medium-grey-1);
+
+}
+
+
+
+
+/* -------------------------------------------------------------- */
+/* [2/2] - Filter Label up & down ( docs , projects )
+/* -------------------------------------------------------------- */
+
+.lbl-filter-sub-topic-item-up-down {
+
+    width: 3.6em; /* because of .1em border-right */
+
+    background-color: var(--dark-grey-1);
+    color:var(--dark-black-1);
+    font-weight: bold;
+    line-height: 1.2em;
+
+    border-radius: 0em 0em 0em .3em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+   
+}
+
+.img-filter-sub-topic-item-up-down { width: 1.3em; }
+
+
+.lbl-filter-sub-topic-item-up-down:hover {
+
+    transition: .3s;
+    background-color: var(--light-brown-3);
+}
+
+
+
+/* -------------------------------------------------------------- */
+/* Filter Content Container 
+/* -------------------------------------------------------------- */
+
+.filter-content-container {
+
+    background-color: var(--dark-black-1);
+    border-radius: .0em .0em .3em .3em;
+ 
+    padding: 1em 0em 0em 0em;    
+   
+
+}
+
+.filter-content-cards-container {
+
+    margin: 0em .8em;
+    padding: 1.8em 0em;
+
+    border-top: 1px solid var(--light-brown-3);
+
+    /* border-top: 1px solid red; */
+
+}
+
+
+.filter-content-cards-footer-container {
+
+    margin: 0em .8em;
+    padding: 1.3em 0em 1.3em 0em;
+
+    border-top: 1px solid var(--light-brown-3);
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    column-gap: 1em;
+}
+
+.img-docs-projects-footer { width: 4.3em; }

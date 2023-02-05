@@ -1,0 +1,26 @@
+/* --------------------------------------------
+
+    footer.css 
+
+    Define Layout which will be only used
+    in my footer 
+
+---------------------------------------------- */
+
+#own-footer-container {
+
+    background-color: var(--dark-black-1);
+
+}
+
+
+/* --------------------------------------------------------------- */
+/* Own Footer Layout 
+/* --------------------------------------------------------------- */
+
+#own-footer-layout {
+
+    padding: 1.5em .8em;
+
+
+}

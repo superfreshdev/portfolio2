@@ -1,0 +1,18 @@
+/* --------------------------------------------
+
+    text-styles.css 
+
+    Default CSS Style for all text styles 
+    which u will be often use
+
+---------------------------------------------- */
+
+
+.txt-a-c { text-align: center; }
+
+.txt-qoute { font-style: italic; }
+
+.txt-quote-light-brown-3 { 
+    font-style: italic;
+    color: var(--light-brown-3); 
+}

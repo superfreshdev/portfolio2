@@ -1,0 +1,21 @@
+/* --------------------------------------------
+
+    element-styles.css 
+
+    Default CSS Style for element styles 
+    which will be often used
+
+---------------------------------------------- */
+
+
+
+/* ---------------------------------------------------------- */
+/* Line Container  - Trip Content 
+/* ---------------------------------------------------------- */
+
+.line-content-trimmer-container-light-brown-3 {
+   
+    height: .2em;
+    background-color: var(--light-brown-3);
+
+}

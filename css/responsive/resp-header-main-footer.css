@@ -1,0 +1,229 @@
+/* --------------------------------------------
+
+    resp-header-main-footer.css 
+
+    Define all responsive handling 
+    for header , main and footer for 
+    mobile , tablet and desktop screens
+
+---------------------------------------------- */
+
+
+
+/* ------------------------------------- */
+/* >= 420px | Mobile 
+/* ------------------------------------- */
+@media (min-width: 420px) {
+
+    /* ----------------------------------------------------------------------------------------------------- */
+    /* Header 
+    /* ---------------------------------------------------------------------------------------------------- */
+
+    /* white & black header nav icon show in this screen size 
+    /* and add hover & set handling for this new icon */
+    
+    /* default show white icon */
+    .lbl-own-header-nav > img:nth-of-type(1) { display: block; }
+    
+    /* hover handling to unshow white and show black */
+    .lbl-own-header-nav:hover > img:nth-of-type(1) {display: none; }
+    .lbl-own-header-nav:hover > img:nth-of-type(2) {display: block; }
+
+    /* radio checked handling for unshown white icon and show black icon */
+    input#radio-header-nav-docs:checked ~ #own-header-container #trigger-lbl-header-nav-docs > img:nth-of-type(1) ,
+    input#radio-header-nav-projects:checked ~ #own-header-container #trigger-lbl-header-nav-projects > img:nth-of-type(1),
+    input#radio-header-nav-about:checked ~ #own-header-container #trigger-lbl-header-nav-about > img:nth-of-type(1) {
+
+        display: none; 
+
+    }
+
+    input#radio-header-nav-docs:checked ~ #own-header-container #trigger-lbl-header-nav-docs > img:nth-of-type(2) ,
+    input#radio-header-nav-projects:checked ~ #own-header-container #trigger-lbl-header-nav-projects > img:nth-of-type(2),
+    input#radio-header-nav-about:checked ~ #own-header-container #trigger-lbl-header-nav-about > img:nth-of-type(2) {
+
+        display:block; 
+
+    }
+   
+}
+
+
+/* ------------------------------------- */
+/* >= 540px | Mobile 
+/* ------------------------------------- */
+@media (min-width: 480px) {
+
+    /* ---------------------------------------------------------------------------------------------------- */
+    /* Header 
+    /* ---------------------------------------------------------------------------------------------------- */
+    
+    /* reset default padding-right-left because of using justify-center by flex */
+    #own-header-title-layout { padding: .6em .8em 0em .8em; }
+    #own-header-nav-layout {  padding: 0em .8em .3em .8em;  } 
+
+    /* update width of main header width , at beginning here it should be little bit smaller of header width
+    because of prportion and by bigger screen it gets the same width of header width */
+    .main-header-width-container {
+
+        /* 30em - .8em - .8em */
+        /* because our main inside grow little bit later than 
+        /* our header and thats default left .8em and right .8em , so
+        /* thats why we need smaller max-width to be on the same width as header content */
+        max-width: 28.4em; 
+        min-width: 28.4em; 
+    
+    }
+
+
+   
+          
+}
+
+/* ------------------------------------- */
+/* >= 520px | Mobile 
+/* ------------------------------------- */
+@media (min-width: 500px) {
+
+    /* ---------------------------------------------------------------------------------------------------- */
+    /* Main 
+    /* ---------------------------------------------------------------------------------------------------- */
+    .filter-content-container { border-radius: .3em; }
+       
+}
+
+
+/* ------------------------------------- */
+/* >= 580px | Mobile 
+/* ------------------------------------- */
+@media (min-width: 580px) {
+
+    /* ---------------------------------------------------------------------------------------------------- */
+    /* Main 
+    /* ---------------------------------------------------------------------------------------------------- */
+    .filter-content-container { margin: 0em .8em; }
+
+          
+}
+
+
+/* ------------------------------------- */
+/* >= 760px | Mobile 
+/* ------------------------------------- */
+@media (min-width: 760px) {
+
+    /* ---------------------------------------------------------------------------------------------------- */
+    /* Header 
+    /* ---------------------------------------------------------------------------------------------------- */
+   
+    /* Bring Header Layout to Desktop Layout ( Horizontal ) */
+
+    /* delete mobile top paddings */
+    #own-header-title-layout { padding: 0em; }
+    #own-header-nav-layout {  padding: 0em;  } 
+
+    /* add in header nav topic label , padding-left,right because its not more only center to use because there is no growing -
+    /* our header content layout grows only in the width of the screen */
+    .lbl-own-header-nav {
+
+        padding-left: .8em;
+        padding-right: .8em;
+    }
+
+    #own-header-layout {
+
+        height: 4em;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center; 
+        justify-content: center;
+
+        column-gap: 2em;
+    
+        width: 50em;
+        /* background-color: red; */
+    
+        /* max-width: 30em; */
+    
+        /*Stretch*/
+        /* flex:1; */
+    
+    }
+
+    /* ---------------------------------------------------------------------------------------------------- */
+    /* Main 
+    /* ---------------------------------------------------------------------------------------------------- */
+
+    /* update main distance from fixed header */
+    #own-main-container {
+
+        margin-top: 4em;
+       
+    }
+
+    /* update width of main header width , at beginning here it should be little bit smaller of header width
+    because of prportion and by bigger screen it gets the same width of header width */
+    .main-header-width-container {
+
+        /* 30em - .8em - .8em */
+        /* because our main inside grow little bit later than 
+        /* our header and thats default left .8em and right .8em , so
+        /* thats why we need smaller max-width to be on the same width as header content */
+        max-width: 41.1em; 
+        min-width: 41.1em; 
+    
+    }
+
+
+    
+
+          
+}
+
+
+
+/* ------------------------------------- */
+/* >= 1280px | Mobile 
+/* ------------------------------------- */
+@media (min-width: 1280px) {
+
+    
+    /* ---------------------------------------------------------------------------------------------------- */
+    /* MAIN 
+    /* ---------------------------------------------------------------------------------------------------- */
+    
+    /* show text inside main nav */
+    .lbl-sub-main-nav > .lbl-main-nav-txt-layout { display: block; }
+
+    /* main card content pos smaller to get more background view of page */
+    .main-card-content-container { width: 50em; }
+    
+
+}
+
+
+
+
+/* ------------------------------------- */
+/* >= 1680px | Mobile 
+/* ------------------------------------- */
+@media (min-width: 1680px) {
+
+    
+    /* ---------------------------------------------------------------------------------------------------- */
+    /* HTML , Body 
+    /* ---------------------------------------------------------------------------------------------------- */
+   
+    html , body { font-size: 1.1rem; }
+
+
+     
+    /* ---------------------------------------------------------------------------------------------------- */
+    /* MAIN 
+    /* ---------------------------------------------------------------------------------------------------- */
+
+    .main-card-content-container { width: 65em }
+    
+
+}

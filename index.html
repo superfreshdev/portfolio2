@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- --------------------------------------------------------------- -->
+    <!-- Favicons                                                        -->
+    <!-- --------------------------------------------------------------- -->
+
+    <link rel="icon" type="image/x-icon" href="media/img/default/favicons/favicon.ico">
+    <!-- <link rel="icon" type="image/png" href="multimedia/img/portfolio/header/favicon/android-chrome-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="multimedia/img/portfolio/header/favicon/android-chrome-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="multimedia/img/portfolio/header/favicon/android-chrome-48x48.png" sizes="48x48">
+        
+    <link rel="icon" type="image/png" href="multimedia/img/portfolio/header/favicon/android-chrome-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="multimedia/img/portfolio/header/favicon/android-chrome-144x144.png" sizes="144x144">
+    <link rel="icon" type="image/png" href="multimedia/img/portfolio/header/favicon/android-chrome-192x192.png" sizes="192x192"> -->
+    
+    <link rel="icon" type="image/png" href="media/img/default/favicons/apple-touch-icon.png" sizes="256x256">
+    <link rel="icon" type="image/png" href="media/img/default/favicons/android-chrome-512x512.png" sizes="512x512">
+
+
+    <!-- --------------------------------------------------------------- -->
+    <!-- CSS Bindings                                                    -->
+    <!-- --------------------------------------------------------------- -->
+
+    <!-- Html , Body -->
+    <link rel="stylesheet" href="css/html-body.css">
+        
+    <!-- Default -->
+    <link rel="stylesheet" href="css/default/colors.css">
+    <link rel="stylesheet" href="css/default/text-styles.css">
+    <link rel="stylesheet" href="css/default/element-styles.css">
+
+    <link rel="stylesheet" href="css/default/flex-grid.css">
+
+
+    <!-- Header , Main , Foter , Responsive -->
+    <link rel="stylesheet" href="css/header/header.css">
+
+
+    <link rel="stylesheet" href="css/main/main.css">
+    <link rel="stylesheet" href="css/main/docs-card.css">
+
+
+    <link rel="stylesheet" href="css/footer/footer.css">
+
+    <link rel="stylesheet" href="css/responsive/resp-header-main-footer.css">
+
+    <title>SuperfreshDEV - Web & Data Science Developer </title>
+
+
+</head>
+
+
+
+<body id="body-superfreshdev-portfolio-container">
+
+    <!-- ------------------------------------------------------------------- -->
+    <!-- Radio & Checkboxes - Registration ( unshown by css )                -->
+    <!-- ------------------------------------------------------------------- -->
+
+        <!-- -------------------------------------------------------------- -->
+        <!-- Header Nav - Dokus , Projects , About                          -->
+        <!-- -------------------------------------------------------------- -->
+        <input type="radio" id="radio-header-nav-docs" name="name-header-nav" checked>
+        <input type="radio" id="radio-header-topic-nav-projects" name="name-header-nav">
+        <input type="radio" id="radio-header-topic-nav-about" name="name-header-nav">
+
+
+        <!-- -------------------------------------------------------------- -->
+        <!-- Audio Play / Pause - Dokus , Projects , About                  -->
+        <!-- -------------------------------------------------------------- -->
+
+        <!-- --------------------------------------------------------------------------------- -->
+        <!-- Checkbox - MP3 Audio Card ( play / stop )                                         -->
+        <!-- --------------------------------------------------------------------------------- -->
+        <input type="checkbox" id="chk-mp3-docs" >
+        <input type="checkbox" id="chk-mp3-projects">
+        <input type="checkbox" id="chk-mp3-about">
+
+        <!-- -------------------------------------------------------------- -->
+        <!-- Audio Files for MP3 Audio                                     -->
+        <!-- -------------------------------------------------------------- -->
+        <audio id="audioMp3Docs" loop>
+            <!--<source src="horse.ogg" type="audio/ogg">-->
+            <source src="media/audio/main/default/hp-docs.mp3" type="audio/mpeg">
+            <!--Your browser does not support the audio element.-->
+        </audio>
+
+        <audio id="audioMp3Projects" loop>
+            <!--<source src="horse.ogg" type="audio/ogg">-->
+            <source src="media/audio/main/default/ob-projects.mp3" type="audio/mpeg">
+            <!--Your browser does not support the audio element.-->
+        </audio>
+
+        <audio id="audioMp3About" loop>
+            <!--<source src="horse.ogg" type="audio/ogg">-->
+            <source src="media/audio/main/default/st-about.mp3" type="audio/mpeg">
+            <!--Your browser does not support the audio element.-->
+        </audio>
+
+
+        <!----------------------------------------------------------------- -->
+        <!-- Dokus Topic Navs                                               -->
+        <!-- ( Web & App Entwicklung , Data Science , Backend ... )         -->
+        <!----------------------------------------------------------------- -->
+        <input type="radio" id="radio-main-docs-web-app-dev" name="name-main-docs-web-app-dev" checked>
+        <input type="radio" id="radio-main-docs-data-science" name="name-main-docs-web-app-dev">
+        <input type="radio" id="radio-main-docs-backend-co" name="name-main-docs-web-app-dev">
+        <input type="radio" id="radio-main-docs-tech-tools" name="name-main-docs-web-app-dev">
+         
+
+
+        <!-- -------------------------------------------------------------- -->
+        <!-- Dokus Topic Filters                                            -->
+        <!-- -------------------------------------------------------------- -->
+        <input type="radio" id="radio-filter-docs-web-app-dev" name="name-radio-filter-docs-web-app-dev" checked>
+        <input type="radio" id="radio-filter-docs-programming" name="name-radio-filter-docs-web-app-dev">
+        <input type="radio" id="radio-filter-docs-html-css" name="name-radio-filter-docs-web-app-dev">
+        <input type="radio" id="radio-filter-docs-cms-systems" name="name-radio-filter-docs-web-app-dev">
+
+        <input type="radio" id="radio-filter-docs-web-app-dev-up-down"> 
+
+
+        <!-- -------------------------------------------------------------- -->
+        <!-- Projects Topic Filters                                         -->
+        <!-- -------------------------------------------------------------- -->
+
+
+        <!-- -------------------------------------------------------------- -->
+        <!-- About Topic Filters                                            -->
+        <!-- -------------------------------------------------------------- -->
+
+
+    <!-- --------------------------------------------------------------- -->
+    <!-- Header                                                          -->
+    <!-- --------------------------------------------------------------- -->
+    <header id="own-header-container">
+
+      
+        <!-- --------------------------------------------------------- -->
+        <!-- Header Nav Top Line ( only Mobile Version )               -->
+        <!-- --------------------------------------------------------- -->
+        <!-- <div class="line-content-trimmer-container-light-brown-3"></div> -->
+
+        <div class="flex jc-c">
+
+            <div id="own-header-layout">
+
+                <!-- -------------------------------------------- -->
+                <!-- Header Title Layout                          -->
+                <!-- -------------------------------------------- -->
+                <div id="own-header-title-layout">
+
+
+                    <img src="media/img/header/ich-klein.PNG" class="img-own-header-me" alt="img">
+
+                    <div id="own-header-title-box">
+
+                        <div id="own-header-title">SuperfreshDEV</div>
+                        <div id="own-header-sub-title">» Web & Data Science Developer</div>
+
+                    </div>
+
+
+                </div>
+
+                <!-- -------------------------------------------- -->
+                <!-- Header Nav Layout                            -->
+                <!-- -------------------------------------------- -->
+                <nav id="own-header-nav-layout">
+                
+
+                    <!-- -------------------------------------- -->
+                    <!-- Dokus - Label                          -->
+                    <!-- -------------------------------------- -->
+                    <label for="radio-header-nav-docs" id="trigger-lbl-header-nav-docs" class="lbl-own-header-nav" name="name-header-nav">
+
+                        <!-- topic icon , content flag -->
+                        <img src="media/img/default/topics/books-white.svg" class="img-lbl-nav-header-topic" alt="img">
+                        <img src="media/img/default/topics/books-black.svg" class="img-lbl-nav-header-topic" alt="img">
+                        <img src="media/img/default/flags/germany-flag.svg" class="img-lbl-nav-flag" alt="img">
+
+                        <div>Doku's</div>
+                        
+                    </label>
+
+                    <div class="own-header-nav-label-seperator">‹›</div>
+
+                    <!-- -------------------------------------- -->
+                    <!-- Projects - Label                       -->
+                    <!-- -------------------------------------- -->
+                    <label for="radio-header-topic-nav-projects" id="trigger-lbl-header-nav-projects" class="lbl-own-header-nav" name="name-header-nav">
+
+                        <!-- topic icon , content flag -->
+                        <img src="media/img/default/topics/rocket-white-check.svg" class="img-lbl-nav-header-topic" alt="img">
+                        <img src="media/img/default/topics/rocket-black-check.svg" class="img-lbl-nav-header-topic" alt="img">
+                        <img src="media/img/default/flags/uk-flag.png" class="img-lbl-nav-flag" alt="img">
+                        
+                        <div>Project's</div>
+                        
+                    </label>
+
+                    <div class="own-header-nav-label-seperator">‹›</div>
+
+                    <!-- -------------------------------------- -->
+                    <!-- About - Label                          -->
+                    <!-- -------------------------------------- -->
+                    <label for="radio-header-topic-nav-about" id="trigger-lbl-header-nav-about" class="lbl-own-header-nav" name="name-header-nav">
+
+                        <!-- topic icon , content flag -->
+                        <img src="media/img/default/topics/neu-white.png" class="img-lbl-nav-header-topic" alt="img">
+                        <img src="media/img/default/topics/neu-black.png" class="img-lbl-nav-header-topic" alt="img">
+                        <img src="media/img/default/flags/uk-flag.png" class="img-lbl-nav-flag" alt="img">
+                        
+                        <div>About</div>
+                        
+                    </label>
+
+                    
+                </nav>
+    
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ------------------------------------ -->
+        <!-- Header Nav Bottom Line               -->
+        <!-- ------------------------------------ -->
+        <div class="line-content-trimmer-container-light-brown-3"></div>
+
+    </header>
+
+
+
+    <!-- --------------------------------------------------------------- -->
+    <!-- Main                                                            -->
+    <!-- --------------------------------------------------------------- -->
+    <main id="own-main-container">
+        
+    
+        
+        <!-- ---------------------------------------------------------------------------- -->
+        <!-- Card - Dokus                                                                 -->
+        <!-- ---------------------------------------------------------------------------- -->
+        <div class="own-main-card-position" id="trigger-docs-card" >
+
+
+            <!-- ------------------------------------------------------------- -->
+            <!-- Background - Color / IMG / Video                              -->
+            <!-- ------------------------------------------------------------- -->
+            <!-- Background - Color -->
+            <!-- <div class="background-color-style-docs-1 pos-background-layout-card trigger-background-color-card"></div> -->
+            <!-- Background - IMG -->
+            <img src="media/img/main/docs/pexels-ovan-62693.jpg" class="pos-background-layout-card trigger-img-background-card" alt="img">
+            <!-- Background - Video -->
+            <!-- <video class=" trigger-video-background-card"></video> -->
+
+
+            <!-- --------------------------------------------------------- -->
+            <!-- Main Card Content Container                               -->
+            <!-- --------------------------------------------------------- -->
+            <div class="main-card-content-container">
+
+                <!-- --------------------------------------------------------- -->
+                <!-- Topic Nav & Filter Panel  ( Center )                      -->
+                <!-- --------------------------------------------------------- -->
+                <div class="flex jc-c">
+
+                    <!-- --------------------------------------------------------- -->
+                    <!-- Header Width Container                                    -->
+                    <!-- --------------------------------------------------------- -->
+                    <div class="main-header-width-container">
+
+
+                        <!-- ---------------------------------------------------------------------- -->
+                        <!-- Dokus Topic Panel  ( docs , projects )                                -->
+                        <!-- ---------------------------------------------------------------------- -->
+                        <div class="main-nav-topic-docs-projects-layout">
+                        
+                            <!-- ---------------------------------------- -->
+                            <!-- Label - Web App Entwicklung              -->
+                            <!-- ---------------------------------------- -->
+                            <label for="radio-main-docs-web-app-dev" class="lbl-sub-main-nav" id="trigger-lbl-main-docs-web-app-dev" title="Web & App - Entwicklung">
+
+                                <div class="flex ai-c jc-c">
+
+                                    <img src="media/img/main/docs/docs-nav/doc-web-white.png" class="img-main-nav-lbl" alt="img">
+                                    <img src="media/img/main/docs/docs-nav/doc-web-black.png" class="img-main-nav-lbl" alt="img">
+
+                                </div>
+
+                                <div class="lbl-main-nav-txt-layout">
+
+                                    <div>Web & App </div>
+                                    <div>Entwicklung</div>
+
+                                </div>
+                            </label>
+
+                            <!-- ---------------------------------------- -->
+                            <!-- Label - Data Science                     -->
+                            <!-- ---------------------------------------- -->
+                            <label for="radio-main-docs-data-science" class="lbl-sub-main-nav" id="trigger-lbl-main-docs-data-science" title="Web & App - Entwicklung">
+
+                                <div class="flex ai-c jc-c">
+
+                                    <img src="media/img/main/docs/docs-nav/doc-ds-white.png" class="img-main-nav-lbl" alt="img">
+                                    <img src="media/img/main/docs/docs-nav/doc-ds-black.png" class="img-main-nav-lbl" alt="img">
+
+                                </div>
+
+                                <div class="lbl-main-nav-txt-layout">
+
+                                    <div>Data </div>
+                                    <div>Science</div>
+
+                                </div>
+
+                            </label>
+
+                            <!-- ---------------------------------------- -->
+                            <!-- Label - Backend                          -->
+                            <!-- ---------------------------------------- -->
+                            <label for="radio-main-docs-backend-co" class="lbl-sub-main-nav" id="trigger-lbl-main-docs-backend-co" title="Web & App - Entwicklung">
+
+                                <div class="flex ai-c jc-c">
+
+                                    <img src="media/img/main/docs/docs-nav/doc-dbs-white.png" class="img-main-nav-lbl" alt="img">
+                                    <img src="media/img/main/docs/docs-nav/doc-dbs-black.png" class="img-main-nav-lbl" alt="img">
+
+                                </div>
+
+
+                                <div class="lbl-main-nav-txt-layout">
+
+                                    <div>Backend </div>
+                                    <div>& Co </div>
+
+                                </div>
+
+                            </label>
+
+
+                            <!-- ---------------------------------------- -->
+                            <!-- Label - Tech Tools                       -->
+                            <!-- ---------------------------------------- -->
+                            <label for="radio-main-docs-tech-tools" class="lbl-sub-main-nav" id="trigger-lbl-main-docs-tech-tools" title="Web & App - Entwicklung">
+
+                                <div class="flex ai-c jc-c">
+
+                                    <img src="media/img/main/docs/docs-nav/doc-tt-white.png" class="img-main-nav-lbl" alt="img">
+                                    <img src="media/img/main/docs/docs-nav/doc-tt-black.png" class="img-main-nav-lbl" alt="img">
+
+                                </div>
+
+                                <div class="lbl-main-nav-txt-layout">
+
+                                    <div>Tech </div>
+                                    <div>Tool's </div>
+
+                                </div>
+
+                            </label>
+
+                            <!-- ---------------------------------------- -->
+                            <!-- Label - Audio                            -->
+                            <!-- ---------------------------------------- -->
+                            <label for="chk-mp3-docs" class="lbl-sub-main-nav-audio" id="js-lbl-mp3-docs" title="Web & App - Entwicklung">
+
+                                <div class="flex ai-c jc-c">
+
+                                    <img src="media/img/default/audio/mp3-play.png" class="img-main-nav-audio" alt="img">
+                                    <img src="media/img/default/audio/mp3-pause.png" class="img-main-nav-audio" alt="img">
+
+                                </div>
+
+                            </label>
+
+
+                        </div>
+
+                        <!-- ---------------------------------------------------------------------- -->
+                        <!-- [1/4] - Filter Topic Panel - Dokus - Web App Enwicklung                -->
+                        <!-- ---------------------------------------------------------------------- -->
+                        <nav class="filter-topic-panel" id="trigger-filter-topic-panel-docs-web-app-dev">
+
+
+                            <!-- ------------------------------------------------------ -->
+                            <!-- Filter Label Item Container                            -->
+                            <!-- ------------------------------------------------------ -->
+                            <div class="filter-sub-topic-container">
+
+                                <!-- ---------------------------------------------- -->
+                                <!-- Filter Item - Web Frameworks                    -->
+                                <!-- ---------------------------------------------- -->
+                                <label for="radio-filter-docs-web-app-dev" style="align-self: flex-end;" class="lbl-filter-sub-topic-item" id="trigger-lbl-filter-docs-web-app-dev" name="name-radio-filter-docs-web-app-dev">
+                        
+                                    <!-- ----------------------- -->
+                                    <!-- My Own Radio Circle     -->
+                                    <!-- ----------------------- -->
+                                    <div class="my-own-circle-outside">
+            
+                                        <!-- Setted Point inside circle if setted -->
+                                        <div class="my-own-set-point"></div>
+            
+                                    </div>
+            
+                                    
+                                    <div>Web-Frameworks</div>
+            
+            
+                                </label>
+
+                                <!-- ---------------------------------------------- -->
+                                <!-- Filter Item - Programmierung                   -->
+                                <!-- ---------------------------------------------- -->
+                                <label for="radio-filter-docs-programming" class="lbl-filter-sub-topic-item" id="trigger-lbl-filter-docs-programming" name="name-radio-filter-docs-web-app-dev">
+                        
+                                    <!-- ----------------------- -->
+                                    <!-- My Own Radio Circle     -->
+                                    <!-- ----------------------- -->
+                                    <div class="my-own-circle-outside">
+            
+                                        <!-- Setted Point inside circle if setted -->
+                                        <div class="my-own-set-point"></div>
+            
+                                    </div>
+            
+                                    
+                                    <div>Programmierung</div>
+            
+            
+                                </label>
+
+                                <!-- ---------------------------------------------- -->
+                                <!-- Filter Item - HTML-CSS-CSS-Frameworks-JS       -->
+                                <!-- ---------------------------------------------- -->
+                                <label for="radio-filter-docs-html-css" class="lbl-filter-sub-topic-item" id="trigger-lbl-filter-docs-html-css" name="name-radio-filter-docs-web-app-dev">
+                        
+                                    <!-- ----------------------- -->
+                                    <!-- My Own Radio Circle     -->
+                                    <!-- ----------------------- -->
+                                    <div class="my-own-circle-outside">
+            
+                                        <!-- Setted Point inside circle if setted -->
+                                        <div class="my-own-set-point"></div>
+            
+                                    </div>
+            
+                                    
+                                    <div>HTML-CSS-CSS-Frameworks-JS</div>
+            
+            
+                                </label>
+
+                                <!-- ---------------------------------------------- -->
+                                <!-- Filter Item - CMS Systems                      -->
+                                <!-- ---------------------------------------------- -->
+                                <label for="radio-filter-docs-cms-systems" class="lbl-filter-sub-topic-item" id="trigger-lbl-filter-docs-cms-systems" name="name-radio-filter-docs-web-app-dev">
+                        
+                                    <!-- ----------------------- -->
+                                    <!-- My Own Radio Circle     -->
+                                    <!-- ----------------------- -->
+                                    <div class="my-own-circle-outside">
+            
+                                        <!-- Setted Point inside circle if setted -->
+                                        <div class="my-own-set-point"></div>
+            
+                                    </div>
+            
+                                    
+                                    <div>CMS - Systeme</div>
+            
+            
+                                </label>
+
+                            </div>
+
+                            <!-- ------------------------------------------------------ -->
+                            <!-- Filter Label up & down                                 -->
+                            <!-- ------------------------------------------------------ -->
+                            <label for="radio-filter-docs-web-app-dev-up-down" class="lbl-filter-sub-topic-item-up-down">
+                                
+                                <!-- <img src="media/img/default/icons/arrow-up-black.png" class="img-filter-sub-topic-item-up-down" alt="img"> -->
+                                <!-- if js is active it replace this div to an arrow up/down img -->
+                                <div id="js-filter-sub-topic-item-up-down" class="js-filter-topic-panel-lbl-up-down">no <br> JS</div>
+
+                            </label>
+
+
+                        </nav>
+
+                        <!-- ---------------------------------------------------------------------- -->
+                        <!-- [2/4] - Filter Topic Panel - Dokus - Data Science                      -->
+                        <!-- ---------------------------------------------------------------------- -->
+                        <nav class="filter-topic-panel" id="trigger-filter-topic-panel-docs-data-science">
+
+
+                            <!-- ------------------------------------------------------ -->
+                            <!-- Filter Label Item Container                            -->
+                            <!-- ------------------------------------------------------ -->
+                            <div class="filter-sub-topic-container">
+
+                                <!-- ---------------------------------------------- -->
+                                <!-- Filter Item - Web Frameworks                    -->
+                                <!-- ---------------------------------------------- -->
+                                <label for="radio-filter-docs-web-app-dev" class="lbl-filter-sub-topic-item" id="trigger-lbl-filter-docs-web-app-dev" name="name-radio-filter-docs-web-app-dev">
+                        
+                                    <!-- ----------------------- -->
+                                    <!-- My Own Radio Circle     -->
+                                    <!-- ----------------------- -->
+                                    <div class="my-own-circle-outside">
+            
+                                        <!-- Setted Point inside circle if setted -->
+                                        <div class="my-own-set-point"></div>
+            
+                                    </div>
+            
+                                    
+                                    <div>Data Science & Tool's</div>
+            
+            
+                                </label>
+
+                                <!-- ---------------------------------------------- -->
+                                <!-- Filter Item - Programmierung                   -->
+                                <!-- ---------------------------------------------- -->
+                                <label for="radio-filter-docs-programming" class="lbl-filter-sub-topic-item" id="trigger-lbl-filter-docs-programming" name="name-radio-filter-docs-web-app-dev">
+                        
+                                    <!-- ----------------------- -->
+                                    <!-- My Own Radio Circle     -->
+                                    <!-- ----------------------- -->
+                                    <div class="my-own-circle-outside">
+            
+                                        <!-- Setted Point inside circle if setted -->
+                                        <div class="my-own-set-point"></div>
+            
+                                    </div>
+            
+                                    
+                                    <div>Math</div>
+            
+            
+                                </label>
+
+                                <!-- ---------------------------------------------- -->
+                                <!-- Filter Item - HTML-CSS-CSS-Frameworks-JS       -->
+                                <!-- ---------------------------------------------- -->
+                                <label for="radio-filter-docs-html-css" class="lbl-filter-sub-topic-item" id="trigger-lbl-filter-docs-html-css" name="name-radio-filter-docs-web-app-dev">
+                        
+                                    <!-- ----------------------- -->
+                                    <!-- My Own Radio Circle     -->
+                                    <!-- ----------------------- -->
+                                    <div class="my-own-circle-outside">
+            
+                                        <!-- Setted Point inside circle if setted -->
+                                        <div class="my-own-set-point"></div>
+            
+                                    </div>
+            
+                                    
+                                    <div>Programming</div>
+            
+            
+                                </label>
+
+                                <!-- ---------------------------------------------- -->
+                                <!-- Filter Item - CMS Systems                      -->
+                                <!-- ---------------------------------------------- -->
+                                <label for="radio-filter-docs-cms-systems" class="lbl-filter-sub-topic-item" id="trigger-lbl-filter-docs-cms-systems" name="name-radio-filter-docs-web-app-dev">
+                        
+                                    <!-- ----------------------- -->
+                                    <!-- My Own Radio Circle     -->
+                                    <!-- ----------------------- -->
+                                    <div class="my-own-circle-outside">
+            
+                                        <!-- Setted Point inside circle if setted -->
+                                        <div class="my-own-set-point"></div>
+            
+                                    </div>
+            
+                                    
+                                    <div>Machine Learning & Künstliche Intellingenz </div>
+            
+            
+                                </label>
+
+                            </div>
+
+                            <!-- ------------------------------------------------------ -->
+                            <!-- Filter Label up & down                                 -->
+                            <!-- ------------------------------------------------------ -->
+                            <label for="radio-filter-docs-web-app-dev-up-down" class="lbl-filter-sub-topic-item-up-down">
+                                
+                                <!-- <img src="media/img/default/icons/arrow-up-black.png" class="img-filter-sub-topic-item-up-down" alt="img"> -->
+                                <!-- if js is active it replace this div to an arrow up/down img -->
+                                <div id="js-filter-sub-topic-item-up-down" class="js-filter-topic-panel-lbl-up-down">no <br> JS</div>
+
+                            </label>
+
+
+                        </nav>
+
+                        <!-- ---------------------------------------------------------------------- -->
+                        <!-- [3/4] - Filter Topic Panel - Dokus - Backend & Co                      -->
+                        <!-- ---------------------------------------------------------------------- -->
+                       
+                        <!-- Dont need Filter Topic Panel because not so much categories -->
+
+                        <!-- ---------------------------------------------------------------------- -->
+                        <!-- [4/4] - Filter Topic Panel - Dokus - Tech Tools                        -->
+                        <!-- ---------------------------------------------------------------------- -->
+                        <nav class="filter-topic-panel" id="trigger-filter-topic-panel-docs-tech-tools">
+
+
+                            <!-- ------------------------------------------------------ -->
+                            <!-- Filter Label Item Container                            -->
+                            <!-- ------------------------------------------------------ -->
+                            <div class="filter-sub-topic-container">
+
+                                <!-- ---------------------------------------------- -->
+                                <!-- Filter Item - Web Frameworks                    -->
+                                <!-- ---------------------------------------------- -->
+                                <label for="radio-filter-docs-web-app-dev" class="lbl-filter-sub-topic-item" id="trigger-lbl-filter-docs-web-app-dev" name="name-radio-filter-docs-web-app-dev">
+                        
+                                    <!-- ----------------------- -->
+                                    <!-- My Own Radio Circle     -->
+                                    <!-- ----------------------- -->
+                                    <div class="my-own-circle-outside">
+            
+                                        <!-- Setted Point inside circle if setted -->
+                                        <div class="my-own-set-point"></div>
+            
+                                    </div>
+            
+                                    
+                                    <div>Development</div>
+            
+            
+                                </label>
+
+                                <!-- ---------------------------------------------- -->
+                                <!-- Filter Item - Programmierung                   -->
+                                <!-- ---------------------------------------------- -->
+                                <label for="radio-filter-docs-programming" class="lbl-filter-sub-topic-item" id="trigger-lbl-filter-docs-programming" name="name-radio-filter-docs-web-app-dev">
+                        
+                                    <!-- ----------------------- -->
+                                    <!-- My Own Radio Circle     -->
+                                    <!-- ----------------------- -->
+                                    <div class="my-own-circle-outside">
+            
+                                        <!-- Setted Point inside circle if setted -->
+                                        <div class="my-own-set-point"></div>
+            
+                                    </div>
+            
+                                    
+                                    <div>Office</div>
+            
+            
+                                </label>
+
+                                <!-- ---------------------------------------------- -->
+                                <!-- Filter Item - HTML-CSS-CSS-Frameworks-JS       -->
+                                <!-- ---------------------------------------------- -->
+                                <label for="radio-filter-docs-html-css" class="lbl-filter-sub-topic-item" id="trigger-lbl-filter-docs-html-css" name="name-radio-filter-docs-web-app-dev">
+                        
+                                    <!-- ----------------------- -->
+                                    <!-- My Own Radio Circle     -->
+                                    <!-- ----------------------- -->
+                                    <div class="my-own-circle-outside">
+            
+                                        <!-- Setted Point inside circle if setted -->
+                                        <div class="my-own-set-point"></div>
+            
+                                    </div>
+            
+                                    
+                                    <div>Multimedia</div>
+            
+            
+                                </label>
+
+                               
+                            </div>
+
+                            <!-- ------------------------------------------------------ -->
+                            <!-- Filter Label up & down                                 -->
+                            <!-- ------------------------------------------------------ -->
+                            <label for="radio-filter-docs-web-app-dev-up-down" class="lbl-filter-sub-topic-item-up-down">
+                                
+                                <!-- <img src="media/img/default/icons/arrow-up-black.png" class="img-filter-sub-topic-item-up-down" alt="img"> -->
+                                <!-- if js is active it replace this div to an arrow up/down img -->
+                                <div id="js-filter-sub-topic-item-up-down" class="js-filter-topic-panel-lbl-up-down">no <br> JS</div>
+
+                            </label>
+
+
+                        </nav>
+
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- --------------------------------------------------------- -->
+                <!-- Filter Content Panel - Web Frameworks                     -->
+                <!-- --------------------------------------------------------- -->
+                <div class="filter-content-container">
+
+                    <!-- ------------------------------------------- -->
+                    <!-- Card Content Container                      -->
+                    <!-- ------------------------------------------- -->
+                    <div class="filter-content-cards-container">
+                        
+                        <!-- ------------------------------------------- -->
+                        <!-- Card - Web Framework - ...                  -->
+                        <!-- ------------------------------------------- -->
+                        <div>
+
+                            Card - Web Framework
+
+                        </div>
+
+                    </div>
+
+                    <!-- ------------------------------------------- -->
+                    <!-- Card Footer Container                       -->
+                    <!-- ------------------------------------------- -->
+                    <div class="filter-content-cards-footer-container">
+                       
+                        <!-- ------------------------------- -->
+                        <!-- Doku Footer IMG                 -->
+                        <!-- ------------------------------- -->
+                        <img src="media/img/main/docs/dokus-me-hedwig.png" class="img-docs-projects-footer" alt="img">
+
+                        <!-- ------------------------------- -->
+                        <!-- Doku Quote                      -->
+                        <!-- ------------------------------- -->
+                        <div class="txt-quote-light-brown-3 txt-a-c">
+                            » "Die Lebenszeit für etwas erabeitetes sollte niemals verloren gehen".
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <br><br>
+
+                <!-- --------------------------------------------------------- -->
+                <!-- Container Center like Header                              -->
+                <!-- --------------------------------------------------------- -->
+                <div class="flex jc-c">
+
+                    <!-- --------------------------------------------------------- -->
+                    <!-- Header Width Container                                    -->
+                    <!-- --------------------------------------------------------- -->
+                    <div class="main-header-width-container">
+
+                        <div class="main-header-width-layout">
+                        Main Header Width Container - Main Header Width Container
+                        Main Header Width Container - Main Header Width Container
+                        Main Header Width Container - Main Header Width Container
+                        Main Header Width Container - Main Header Width Container
+                        Main Header Width Container - Main Header Width Container 
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                Dokus Dokus Dokus  Dokus Dokus Dokus  Dokus Dokus Dokus 
+                Dokus Dokus Dokus  Dokus Dokus Dokus  Dokus Dokus Dokus
+                Dokus Dokus Dokus  Dokus Dokus Dokus  Dokus Dokus Dokus 
+                Dokus Dokus Dokus  Dokus Dokus Dokus  Dokus Dokus Dokus
+                <br>
+                Dokus Dokus Dokus  Dokus Dokus Dokus  Dokus Dokus Dokus 
+                Dokus Dokus Dokus  Dokus Dokus Dokus  Dokus Dokus Dokus
+                Dokus Dokus Dokus  Dokus Dokus Dokus  Dokus Dokus Dokus 
+                Dokus Dokus Dokus  Dokus Dokus Dokus  Dokus Dokus Dokus
+
+
+            </div>
+
+           
+        
+
+
+        </div>
+
+
+        <!-- ---------------------------------------------------------------------------- -->
+        <!-- Card - Projects                                                              -->
+        <!-- ---------------------------------------------------------------------------- -->
+        <div  class="own-main-card-position" id="trigger-projects-card">
+
+
+            <!-- ------------------------------------------------------------- -->
+            <!-- Background - Color / IMG / Video                              -->
+            <!-- ------------------------------------------------------------- -->
+            <!-- Background - Color -->
+            <!-- <div class="background-color-style-docs-1 pos-background-layout-card trigger-background-color-card"></div> -->
+            <!-- Background - IMG -->
+            <img src="media/img/main/docs/pexels-gdtography-950241.jpg" class="pos-background-layout-card trigger-img-background-card" alt="img">
+            <!-- Background - Video -->
+            <!-- <video class=" trigger-video-background-card"></video> -->
+
+
+
+            <!-- --------------------------------------------------------- -->
+            <!-- Main Card Content Container                               -->
+            <!-- --------------------------------------------------------- -->
+            <div class="main-card-content-container">
+
+                1-Projects Projects Projects  Projects Projects Projects
+                Projects Projects Projects  Projects Projects Projects
+                Projects Projects Projects  Projects Projects Projects
+                Projects Projects Projects  Projects Projects Projects
+                Projects Projects Projects  Projects Projects Projects 
+                Projects Projects Projects  Projects Projects Projects
+                Projects Projects Projects  Projects Projects Projects
+                Projects Projects Projects  Projects Projects Projects
+                Projects Projects Projects  Projects Projects Projects
+                Projects Projects Projects  Projects Projects Projects
+                Projects Projects Projects  Projects Projects Projects
+
+
+            </div>
+
+           
+
+        </div>
+
+        <!-- ---------------------------------------------------------------------------- -->
+        <!-- Card - About                                                                 -->
+        <!-- ---------------------------------------------------------------------------- -->
+        <div class="own-main-card-position" id="trigger-about-card" >
+
+
+            <!-- ------------------------------------------------------------- -->
+            <!-- Background - Color / IMG / Video                              -->
+            <!-- ------------------------------------------------------------- -->
+            <!-- Background - Color -->
+            <!-- <div class="background-color-style-docs-1 pos-background-layout-card trigger-background-color-card"></div> -->
+            <!-- Background - IMG -->
+            <img src="media/img/main/docs/pexels-ovan-62693.jpg" class="pos-background-layout-card trigger-img-background-card" alt="img">
+            <!-- Background - Video -->
+            <!-- <video class=" trigger-video-background-card"></video> -->
+
+
+
+            <!-- --------------------------------------------------------- -->
+            <!-- Main Card Content Container                               -->
+            <!-- --------------------------------------------------------- -->
+            <div class="main-card-content-container">
+
+                1- About About About About About About  About About About 
+                About About About  About About About  About About About 
+                About About About  About About About About About About 
+                About About About About About About About About About 
+                About About About About About About About About About About About About 
+                About About About About About About About About About About About About 
+                About About About About About About About About About About About About 
+                About About About About About About About About About About About About 
+
+
+            </div>
+
+           
+
+        </div>
+
+    </main>
+
+
+    
+    <!-- --------------------------------------------------------------- -->
+    <!-- Footer                                                          -->
+    <!-- --------------------------------------------------------------- -->
+    <footer id="own-footer-container">
+
+        <!-- ------------------------------------ -->
+        <!-- Footer Top Line                      -->
+        <!-- ------------------------------------ -->
+        <div class="line-content-trimmer-container-light-brown-3"></div>
+
+        <div id="own-footer-layout">
+
+            Footer Footer Footer Footer Footer Footer Footer 
+            Footer Footer Footer Footer Footer FooterFooter Footer
+            Footer Footer Footer Footer Footer Footer Footer Footer
+            Footer Footer Footer Footer Footer Footer Footer Footer
+            Footer Footer Footer
+            Footer Footer Footer Footer Footer Footer Footer
+            Footer Footer Footer Footer Footer FooterFooter Footer
+            Footer Footer Footer Footer Footer Footer Footer Footer
+            Footer Footer Footer Footer Footer Footer Footer Footer
+            Footer Footer Footer
+            Footer Footer Footer Footer Footer Footer Footer
+            Footer Footer Footer Footer Footer FooterFooter Footer
+            Footer Footer Footer Footer Footer Footer Footer Footer
+            Footer Footer Footer Footer Footer Footer Footer Footer
+            Footer Footer Footer
+            <br><br>
+            Footer Footer Footer Footer Footer Footer Footer
+            Footer Footer Footer Footer Footer FooterFooter Footer
+            Footer Footer Footer Footer Footer Footer Footer Footer
+            Footer Footer Footer Footer Footer Footer Footer Footer
+            Footer Footer Footer
+            <br><br>
+            Footer Footer Footer Footer Footer Footer Footer
+            Footer Footer Footer Footer Footer FooterFooter Footer
+            Footer Footer Footer Footer Footer Footer Footer Footer
+            Footer Footer Footer Footer Footer Footer Footer Footer
+            Footer Footer Footer
+
+        </div>
+
+    </footer>
+
+
+
+
+    <!-- ---------------------------------------------------------------- -->
+    <!-- JS Bindings                                                      -->
+    <!-- ---------------------------------------------------------------- -->
+    <script src="js/js-keyboard-left-right-navigation.js"></script>
+    <script src="js/js-play-pause-audio.js"></script>
+
+    <!-- Docs JS Filter Bindings -->
+    <script src="js/main/docs/js-docs-filter.js"></script>
+
+
+</body>
+
+
+
+
+</html>

@@ -1,0 +1,173 @@
+/* --------------------------------------------
+
+    docs-card.css 
+
+    Define Layout which will be only used
+    in my docs card & radio / checkbox handling  
+
+---------------------------------------------- */
+
+
+
+/* --------------------------------------------------------------------------------------------------------------- */
+/* [1/2] - Dokus Topic Nav
+/* --------------------------------------------------------------------------------------------------------------- */
+
+
+/* [ Unshown ] - Radioboxes - Dokus Topic Navs */
+#radio-main-docs-web-app-dev ,
+#radio-main-docs-data-science ,
+#radio-main-docs-backend-co ,
+#radio-main-docs-tech-tools { display: none; } 
+
+
+
+/* ------------------------------------------------------------------------------- */
+/* Styling Checked Handlings - Dokus Topic Navs
+/* ------------------------------------------------------------------------------- */
+
+/* If Radio Checked - set style like hover */
+#radio-main-docs-web-app-dev:checked ~ #own-main-container #trigger-lbl-main-docs-web-app-dev ,
+#radio-main-docs-data-science:checked ~ #own-main-container #trigger-lbl-main-docs-data-science ,
+#radio-main-docs-backend-co:checked ~ #own-main-container #trigger-lbl-main-docs-backend-co ,
+#radio-main-docs-tech-tools:checked ~ #own-main-container #trigger-lbl-main-docs-tech-tools {
+
+    background-color: var(--light-brown-3);
+    color:var(--dark-black-1);
+
+}
+
+/* unshow white img */
+#radio-main-docs-web-app-dev:checked ~ #own-main-container #trigger-lbl-main-docs-web-app-dev > div:first-child > img:nth-of-type(1) ,
+#radio-main-docs-data-science:checked ~ #own-main-container #trigger-lbl-main-docs-data-science > div:first-child > img:nth-of-type(1) ,
+#radio-main-docs-backend-co:checked ~ #own-main-container #trigger-lbl-main-docs-backend-co > div:first-child > img:nth-of-type(1) ,
+#radio-main-docs-tech-tools:checked ~ #own-main-container #trigger-lbl-main-docs-tech-tools > div:first-child > img:nth-of-type(1) {
+
+    display: none;
+
+}
+/* show black img */
+#radio-main-docs-web-app-dev:checked ~ #own-main-container #trigger-lbl-main-docs-web-app-dev > div:first-child > img:nth-of-type(2) ,
+#radio-main-docs-data-science:checked ~ #own-main-container #trigger-lbl-main-docs-data-science > div:first-child > img:nth-of-type(2) ,
+#radio-main-docs-backend-co:checked ~ #own-main-container #trigger-lbl-main-docs-backend-co > div:first-child > img:nth-of-type(2) ,
+#radio-main-docs-tech-tools:checked ~ #own-main-container #trigger-lbl-main-docs-tech-tools > div:first-child > img:nth-of-type(2) {
+  
+    display: block;
+
+}
+
+/* ------------------------------------------------------------------------------- */
+/* Navigate Checked Handlings - Dokus Topic Navs for Showing Filter Panel
+/* ------------------------------------------------------------------------------- */
+
+/* if dokus nav set show filter panel */
+#radio-main-docs-web-app-dev:checked ~ #own-main-container #trigger-filter-topic-panel-docs-web-app-dev ,
+#radio-main-docs-data-science:checked ~ #own-main-container #trigger-filter-topic-panel-docs-data-science ,
+#radio-main-docs-tech-tools:checked ~ #own-main-container #trigger-filter-topic-panel-docs-tech-tools  {
+
+    display: grid;
+}
+
+
+
+
+
+/* --------------------------------------------------------------------------------------------------------------- */
+/* [2/2] - Dokus Topic Filter Nav 
+/* --------------------------------------------------------------------------------------------------------------- */
+
+
+/* ----------------------------------------------------------------- */
+/* Default Hover Filter Item 
+/* ----------------------------------------------------------------- */
+
+/* default label */ 
+.lbl-filter-sub-topic-item:hover {
+
+    transition: .3s;
+    background-color: var(--light-brown-3);
+    color: var(--dark-black-1);
+} 
+
+/* my own radio button outside circle go black */
+.lbl-filter-sub-topic-item:hover > .my-own-circle-outside { border: 2px solid var(--dark-black-1); }
+
+
+
+
+/* ---------------------------------------------------------------------------------------------------- */
+/* [1/4] - Filter Panel - Web App Entwicklung 
+/* ---------------------------------------------------------------------------------------------------- */
+
+/* [ Unshown ] - Radioboxes - Filter Panel - Web App Entwicklung */
+#radio-filter-docs-web-app-dev ,
+#radio-filter-docs-programming , 
+#radio-filter-docs-html-css ,
+#radio-filter-docs-cms-systems ,
+#radio-filter-docs-web-app-dev-up-down { display: none; }
+
+
+
+/* ------------------------------------------------------------------------------- */
+/* Styling Checked Handlings - Filter Panel - Web App Entwicklung
+/* ------------------------------------------------------------------------------- */
+
+/* checked for background & color */
+#radio-filter-docs-web-app-dev:checked ~ #own-main-container #trigger-lbl-filter-docs-web-app-dev,
+#radio-filter-docs-programming:checked ~ #own-main-container #trigger-lbl-filter-docs-programming, 
+#radio-filter-docs-html-css:checked ~ #own-main-container #trigger-lbl-filter-docs-html-css,
+#radio-filter-docs-cms-systems:checked ~ #own-main-container #trigger-lbl-filter-docs-cms-systems {
+
+    color: var(--dark-black-1);
+    background-color: var(--light-brown-3);
+    border: 1px solid var(--light-brown-3);
+
+} 
+
+/* if checked change own radio button outside circle */
+#radio-filter-docs-web-app-dev:checked ~ #own-main-container #trigger-lbl-filter-docs-web-app-dev > .my-own-circle-outside ,
+#radio-filter-docs-programming:checked ~ #own-main-container #trigger-lbl-filter-docs-programming > .my-own-circle-outside  , 
+#radio-filter-docs-html-css:checked ~ #own-main-container #trigger-lbl-filter-docs-html-css > .my-own-circle-outside ,
+#radio-filter-docs-cms-systems:checked ~ #own-main-container #trigger-lbl-filter-docs-cms-systems > .my-own-circle-outside {
+
+    border: 2px solid var(--dark-black-1);
+} 
+
+/* if checked change own radio button inside setted circle */
+#radio-filter-docs-web-app-dev:checked ~ #own-main-container #trigger-lbl-filter-docs-web-app-dev > .my-own-circle-outside > .my-own-set-point ,
+#radio-filter-docs-programming:checked ~ #own-main-container #trigger-lbl-filter-docs-programming > .my-own-circle-outside > .my-own-set-point , 
+#radio-filter-docs-html-css:checked ~ #own-main-container #trigger-lbl-filter-docs-html-css > .my-own-circle-outside > .my-own-set-point,
+#radio-filter-docs-cms-systems:checked ~ #own-main-container #trigger-lbl-filter-docs-cms-systems > .my-own-circle-outside > .my-own-set-point {
+
+   display: block;
+   background-color: var(--dark-black-1);
+
+} 
+
+
+
+/* ---------------------------------------------------------------------------------------------------- */
+/* [2/4] - Filter Panel - Data Science 
+/* ---------------------------------------------------------------------------------------------------- */
+
+
+
+/* ---------------------------------------------------------------------------------------------------- */
+/* [3/4] - Filter Panel - Backend & Co
+/* ---------------------------------------------------------------------------------------------------- */
+
+
+/* ---------------------------------------------------------------------------------------------------- */
+/* [4/4] - Filter Panel - Tech Tools
+/* ---------------------------------------------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+

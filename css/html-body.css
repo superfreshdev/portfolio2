@@ -1,0 +1,35 @@
+/* --------------------------------------------
+
+    html-body.css 
+
+    Default CSS Style for my superfreshdev
+    Porfolio Webpage 
+
+---------------------------------------------- */
+
+
+html , body {
+
+    margin:0;
+    /* to use "100%" height layout of webpage */
+    min-height: 100vh;
+
+    font-size: 1rem;
+    line-height: 1.5em;
+
+    /* block text default , in some case we go for left */
+    /* text-align: center; */
+
+    font-family: Arial, Helvetica, sans-serif;
+    /* little darker white */
+    color: var(--light-white-1);
+
+   
+}
+
+#body-superfreshdev-portfolio-container { 
+
+    display: grid;
+    /* header (fixed / out of layout) , main , footer */
+    grid: auto 1fr / 1fr;
+}
