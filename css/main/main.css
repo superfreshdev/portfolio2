@@ -291,48 +291,63 @@
 /* [1/2] - Filter Label Item Container ( docs , projects )
 /* -------------------------------------------------------------- */
 
+.dyn-as-fe { align-self: flex-end; }
 
-.filter-sub-topic-container {
+
+/* default is in mobile view for less 4 filter items 
+/* with small text */
+.default-filter-items-topic-container,
+.stairs-filter-items-topic-container  {
     
     padding: 1em .8em;
 
-    display: flex;
+    display: flex; 
     flex-wrap: wrap;
-    /* flex-flow: row wrap; */
-    align-items: flex-start;
-    align-content: flex-start;
-
-   
     
+    /* use only space u need & be left orientated */
+    align-items: flex-start;
+    
+
     column-gap: .5em;
     row-gap: .5em;
 
 }
 
+/* stairs is in mobile view for more 4 filter items 
+/* with different long text sizes | why ? its looks better */
+.stairs-filter-items-topic-container {
+
+    /* to build stairs layout */
+    flex-direction: column;
+
+}
+
+/* only by very long filter topic items | why ? - not stretch to long */
+.lbl-filter-topic-item-max-width-10-5em { max-width: auto; }
+.lbl-filter-topic-item-max-width-13-5em { max-width: auto; }
+
 /* --------------------------------------------- */
-/* Label Filter Sub Topic Item 
+/* Label Filter Item Topic
 /* --------------------------------------------- */
 
-.lbl-filter-sub-topic-item {
+.lbl-filter-item-topic {
 
-    cursor: pointer;
+    padding: .3em .6em;
+   
+    border-radius: .3em;
 
+    border: 1px solid var(--medium-grey-3);
+    color:var(--medium-grey-1);
+    
     font-weight: bold;
     font-size: .75em; /* .10 smaller than sub nav main .85em */
 
     display: flex;
     align-items: center;
-    
 
     column-gap: .8em;
 
-    border: 1px solid var(--medium-grey-3);
-    color:var(--medium-grey-1);
-
-    border-radius: .3em;
-
-    padding: .3em .6em;
-
+    cursor: pointer;
  
 }
 
@@ -391,7 +406,7 @@
 /* [2/2] - Filter Label up & down ( docs , projects )
 /* -------------------------------------------------------------- */
 
-.lbl-filter-sub-topic-item-up-down {
+.lbl-filter-item-topic-up-down {
 
     width: 3.6em; /* because of .1em border-right */
 
@@ -411,10 +426,10 @@
    
 }
 
-.img-filter-sub-topic-item-up-down { width: 1.3em; }
+.img-filter-item-topic-up-down { width: 1.3em; }
 
 
-.lbl-filter-sub-topic-item-up-down:hover {
+.lbl-filter-item-topic-up-down:hover {
 
     transition: .3s;
     background-color: var(--light-brown-3);
@@ -451,7 +466,7 @@
 .filter-content-cards-footer-container {
 
     margin: 0em .8em;
-    padding: 1.3em 0em 1.3em 0em;
+    padding: 1.3em .8em 1.3em .8em;
 
     border-top: 1px solid var(--light-brown-3);
 
@@ -459,7 +474,10 @@
     align-items: center;
     justify-content: flex-end;
 
-    column-gap: 1em;
+    column-gap: .5em;
 }
+
+/* get by bigger screen sizes max-width to be better in shape with img */
+.txt-quote-filter-footer-max-width { max-width: auto; }
 
 .img-docs-projects-footer { width: 4.3em; }

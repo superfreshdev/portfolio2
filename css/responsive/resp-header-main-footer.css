@@ -8,7 +8,25 @@
 
 ---------------------------------------------- */
 
+/* ------------------------------------- */
+/* <= 380px | Mobile 
+/* ------------------------------------- */
+@media (max-width: 380px) {
 
+    /* ---------------------------------------------------------------------------------------------------- */
+    /* Main 
+    /* ---------------------------------------------------------------------------------------------------- */
+    .lbl-filter-topic-item-max-width-10-5em { max-width: 10.5em; }
+      
+}
+
+/* ------------------------------------- */
+/* <= 420px | Mobile 
+/* ------------------------------------- */
+@media (max-width: 420px) {
+
+    .lbl-filter-topic-item-max-width-13-5em { max-width: 13.5em; }
+}
 
 /* ------------------------------------- */
 /* >= 420px | Mobile 
@@ -45,6 +63,14 @@
         display:block; 
 
     }
+
+
+    /* ---------------------------------------------------------------------------------------------------- */
+    /* Main 
+    /* ---------------------------------------------------------------------------------------------------- */
+   
+    /* change mobile stair layout with "10.5em" max width to default row layout */
+    .stairs-filter-items-topic-container { flex-direction: row; }
    
 }
 
@@ -81,7 +107,7 @@
 }
 
 /* ------------------------------------- */
-/* >= 520px | Mobile 
+/* >= 500px | Mobile 
 /* ------------------------------------- */
 @media (min-width: 500px) {
 
@@ -175,6 +201,12 @@
     
     }
 
+    /* card footer img bigger */
+    .img-docs-projects-footer { width: 5.3em; }
+
+    /* card footer txt quote get max-width to be better in shape with bigger img */
+    .txt-quote-filter-footer-max-width { max-width: 18em; }
+
 
     
 
@@ -198,6 +230,9 @@
 
     /* main card content pos smaller to get more background view of page */
     .main-card-content-container { width: 50em; }
+
+     /* card footer img bigger */
+     .img-docs-projects-footer { width: 7.3em; }
     
 
 }

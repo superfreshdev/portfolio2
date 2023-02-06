@@ -82,7 +82,7 @@
 /* ----------------------------------------------------------------- */
 
 /* default label */ 
-.lbl-filter-sub-topic-item:hover {
+.lbl-filter-item-topic:hover {
 
     transition: .3s;
     background-color: var(--light-brown-3);
@@ -90,7 +90,7 @@
 } 
 
 /* my own radio button outside circle go black */
-.lbl-filter-sub-topic-item:hover > .my-own-circle-outside { border: 2px solid var(--dark-black-1); }
+.lbl-filter-item-topic:hover > .my-own-circle-outside { border: 2px solid var(--dark-black-1); }
 
 
 
